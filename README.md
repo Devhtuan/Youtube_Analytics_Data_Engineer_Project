@@ -13,7 +13,7 @@ Project architecture:
 
 ---
 
-## 📂 Cấu trúc repo
+## 📂 Repo
 
 ```
 
