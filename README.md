@@ -1,13 +1,13 @@
 # 🎬 Son Tung MTP YouTube Analytics
 
-Dự án phân tích kênh **Sơn Tùng MTP Official** trên YouTube với pipeline end-to-end:
-- **YouTube API** → Crawl dữ liệu (video, playlist, stats)
-- **Snowflake** → Lưu trữ data warehouse
-- **dbt** → Chuyển đổi dữ liệu (Bronze → Silver → Gold)
+Project to analyze **Son Tung MTP Official** channel on YouTube with end-to-end pipeline:
+- **YouTube API** → Crawl data (video, playlist, stats)
+- **Snowflake** →  Data warehouse
+- **dbt** → Transform data (Bronze → Silver → Gold)
 - **Airflow (Cosmos/Astronomer)** → Orchestrate pipeline
-- **Power BI** → Trực quan hoá dashboard
+- **Power BI** → Dashboard
 
-Kiến trúc dự án: 
+Project architecture:
 
 <img src="./imgs/00-architecture.png" alt="Power BI Dashboard" width="800">
 
@@ -56,8 +56,8 @@ son-tung-mtp-analytics/
 
 ---
 
-## 🛠️ Công nghệ sử dụng
-- **Ngôn ngữ & môi trường**: Python 3.x, uv (Python package manager), Jupyter Notebook  
+## 🛠️ Technology:
+- **Language**: Python 3.x, uv (Python package manager), Jupyter Notebook  
 - **Data ingestion**: YouTube Data API v3, `google-api-python-client`, `pandas`  
 - **Data warehouse**: Snowflake (Warehouse, Database, Schema)  
 - **Data transformation**: dbt Core, dbt-snowflake, dbt-utils  
@@ -68,12 +68,12 @@ son-tung-mtp-analytics/
 
 ---
 
-## ⚙️ Chuẩn bị môi trường
+## ⚙️ Enviroment
 
-### 1. Lấy API Key
-Tạo API key tại: [YouTube Data API v3](https://developers.google.com/youtube/v3/getting-started#example-1)
+### 1. Get API Key
+Create API key: [YouTube Data API v3](https://developers.google.com/youtube/v3/getting-started#example-1)
 
-Tạo file `.env` ở thư mục gốc:
+Create file `.env`:
 ```bash
 YOUTUBE_API_KEY=YOUR_API_KEY
 
@@ -88,7 +88,7 @@ SNOWFLAKE_SCHEMA=....
 
 ---
 
-### 2. Tạo venv và cài dependencies
+### 2. Create venv và install dependencies
 
 ```bash
 uv venv
@@ -100,11 +100,11 @@ uv add pandas google-api-python-client google-auth-oauthlib ipykernel python-dot
 
 ---
 
-### 3. Chuẩn bị Snowflake
+### 3. Snowflake
 
 <img src="./imgs/01-snowflake-setup.png" alt="Power BI Dashboard" width="800">
 
-Chạy script tạo warehouse/database/schema:
+Run script create warehouse/database/schema:
 
 ```bash
 cd snowflake-create-wh
@@ -113,31 +113,31 @@ cd snowflake-create-wh
 
 ---
 
-### 4. Crawl dữ liệu YouTube
+### 4. Crawl data YouTube
 
 ```bash
 cd python-get-data
 jupyter notebook get-data.ipynb
 ```
 
-Xuất CSV → sẽ được sử dụng làm seed trong dbt.
+Export CSV →  seed dbt.
 
 ---
 
-### 5. Chạy dbt
+### 5. Run dbt
 
 <img src="./imgs/02-dbt-run-result.png" alt="Power BI Dashboard" width="800">
 
 ```bash
 cd dbt_youtube
 
-# Cài package dbt_utils
+# Install package dbt_utils
 dbt deps
 
-# Nạp seed
+# Seed
 dbt seed --profiles-dir .
 
-# Chạy models
+# Run models
 dbt run --profiles-dir .
 
 # Test
@@ -147,7 +147,7 @@ dbt test --profiles-dir .
 dbt snapshot --profiles-dir .
 ```
 
-> Nếu cần docs:
+> Docs:
 
 ```bash
 dbt docs generate --profiles-dir .
@@ -156,23 +156,23 @@ dbt docs serve --profiles-dir .
 
 ---
 
-### 6. Orchestrate bằng Airflow (Astronomer)
+### 6. Orchestrate use Airflow (Astronomer)
 
-Cài Astronomer CLI:
+Install Astronomer CLI:
 
 ```bash
 curl -sSL https://install.astronomer.io | sudo bash
 astro version
 ```
 
-Khởi tạo project:
+Initialization project:
 
 ```bash
 mkdir dbt_youtube_dag && cd dbt_youtube_dag
 astro dev init
 ```
 
-Trong `requirements.txt`:
+`requirements.txt`:
 
 ```
 apache-airflow==2.9.3
@@ -183,7 +183,7 @@ dbt-snowflake
 python-dotenv
 ```
 
-Khởi động Airflow:
+Start Airflow:
 
 ```bash
 astro dev start
@@ -191,7 +191,7 @@ astro dev start
 
 UI: [http://localhost:8080](http://localhost:8080)
 
-> Lưu ý: Airflow 3.0+ dùng `schedule` thay cho `schedule_interval`.
+> Note: Airflow 3.0+ use `schedule` instead of `schedule_interval`.
 
 <img src="./imgs/03-cosmos-connection-1.png" alt="Cosmos Connection 1" width="800">
 
@@ -203,17 +203,12 @@ UI: [http://localhost:8080](http://localhost:8080)
 
 ### 7. Dashboard Power BI
 
-Dưới đây là báo cáo lấy từ các bảng `gold`, xem link dashboard live [Ở ĐÂY!](https://app.powerbi.com/view?r=eyJrIjoiMzA3MGIyNTYtMjk2OC00NmJjLWExODUtNDhmYTM0YzdmZmM5IiwidCI6IjM3MGZiM2I4LTMzMDYtNDg5MC05MDYzLWNjMDhiZTc4ODI1NyIsImMiOjEwfQ%3D%3D)
 
 <img src="./imgs/06-pbi-dashboard.png" alt="Power BI Dashboard" width="800">
 
-Mở file:
+ 
 
-```
-power-bi-dashboard/SonTungMTP_Dashboard.pbix
-```
-
-Kết nối Snowflake và chọn các bảng **gold** và vẽ báo cáo:
+Connect Snowflake and select table **gold** :
 
 * g\_channel\_overview
 * g\_video\_rankings
@@ -224,32 +219,20 @@ Kết nối Snowflake và chọn các bảng **gold** và vẽ báo cáo:
 
 ---
 
-## 🏗️ Kiến trúc tổng quan
+## 🏗️ Overview architecture
 
-1. **Crawl dữ liệu** từ YouTube API → CSV
-2. **Load vào Snowflake** (seed / staging)
-3. **Transform với dbt** (bronze → silver → gold)
-4. **Orchestrate với Airflow** (Cosmos DAG)
-5. **Visualize bằng Power BI**
+1. **Crawl data** YouTube API → CSV
+2. **Load Snowflake** (seed / staging)
+3. **Transform dbt** (bronze → silver → gold)
+4. **Orchestrate Airflow** (Cosmos DAG)
+5. **Visualize Power BI**
 
----
-
-## 📸 Demo
-
-Xem ảnh trong thư mục [`imgs/`](./imgs)
-
-* Kết nối Snowflake
-* Run dbt thành công
-* DAG Cosmos
-* Dashboard Power BI
-
+ 
 ---
 
 ---
 
 ## 📖 Documentation & References
-
-Trong quá trình xây dựng dự án, mình tham khảo và sử dụng các tài liệu chính thức sau:
 
 - **YouTube Data API v3**  
   [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
@@ -274,13 +257,9 @@ Trong quá trình xây dựng dự án, mình tham khảo và sử dụng các t
 
 ---
 
-## 📜 License
 
-[MIT](/LICENSE)
+## 👤 Author
 
----
-
-## 📬 Liên hệ
-
-Được thực hiện bởi `@tunguyenn99` Xóm Data.  
-👉 Tham gia tại: [facebook.com/groups/xomdata](https://facebook.com/groups/xomdata)
+**Nguyen Dinh Hoang Tuan**  
+📧 ndhtuan02@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/tuan-nguyen-02353b378) | [GitHub](https://github.com/Devhtuan)
