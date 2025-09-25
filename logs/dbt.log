@@ -103,3 +103,138 @@ Runtime Error
 [0m00:46:32.732005 [debug] [MainThread]: Command `dbt run` failed at 00:46:32.731820 after 0.10 seconds
 [0m00:46:32.732490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771d1cf5b1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771d1a50afa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771d1a4d06d0>]}
 [0m00:46:32.733168 [debug] [MainThread]: Flushing usage events
+[0m16:12:51.211678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01BD71930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01CFDC3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01CFDC1F0>]}
+
+
+============================== 16:12:51.226679 | 0eb64dc0-613e-41e4-98a5-9c5b41b5f568 ==============================
+[0m16:12:51.226679 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:12:51.227678 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\nguye\\.dbt'}
+[0m16:12:51.230483 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube\dbt_packages\dbt-utils-1.1.1\integration_tests\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:12:51.233022 [debug] [MainThread]: Command `cli deps` failed at 16:12:51.233022 after 0.81 seconds
+[0m16:12:51.235027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01BD71930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01CFDCD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B01CFDCC40>]}
+[0m16:12:51.236027 [debug] [MainThread]: Flushing usage events
+[0m16:12:51.951077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC2B619C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC3DCC3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC3DCC1C0>]}
+
+
+============================== 16:12:51.965479 | 1a32d7f3-c01d-4ffa-8459-cd6a216aba35 ==============================
+[0m16:12:51.965479 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:12:51.967792 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt ', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'printer_width': '80', 'log_path': 'logs', 'indirect_selection': 'eager', 'profiles_dir': 'C:\\Users\\nguye\\.dbt', 'static_parser': 'True', 'write_json': 'True'}
+[0m16:12:51.969798 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube\dbt_packages\dbt-utils-1.1.1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:12:51.972791 [debug] [MainThread]: Command `cli deps` failed at 16:12:51.972791 after 0.28 seconds
+[0m16:12:51.973792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC2B619C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC3DCCA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BC3DCCCA0>]}
+[0m16:12:51.975792 [debug] [MainThread]: Flushing usage events
+[0m16:12:52.764577 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:12:53.106578 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:21:45.600971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214AF1B1990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214B041C3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214B041C1C0>]}
+
+
+============================== 17:21:45.709730 | 812a34b3-4883-4728-b0c7-c67f9fb404f3 ==============================
+[0m17:21:45.709730 [info ] [MainThread]: Running with dbt=1.10.9
+[0m17:21:45.725118 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\nguye\\.dbt'}
+[0m17:21:45.831755 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:21:45.869185 [debug] [MainThread]: Command `cli deps` failed at 17:21:45.869185 after 0.85 seconds
+[0m17:21:45.875161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214AF1B1990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214B041CD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214B041CC10>]}
+[0m17:21:45.887695 [debug] [MainThread]: Flushing usage events
+[0m17:21:45.975845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E76A019C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E77C6C3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E77C6C1C0>]}
+
+
+============================== 17:21:46.012322 | 635ea4c1-7468-4c2c-9d4f-b10ea1bb73e6 ==============================
+[0m17:21:46.012322 [info ] [MainThread]: Running with dbt=1.10.9
+[0m17:21:46.016569 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'profiles_dir': 'C:\\Users\\nguye\\.dbt', 'static_parser': 'True', 'write_json': 'True'}
+[0m17:21:46.031483 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:21:46.038722 [debug] [MainThread]: Command `cli deps` failed at 17:21:46.038722 after 0.59 seconds
+[0m17:21:46.042454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E76A019C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E77C6CA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E77C6CCA0>]}
+[0m17:21:46.046465 [debug] [MainThread]: Flushing usage events
+[0m17:21:46.746178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D73519C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D85BC3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D85BC1F0>]}
+
+
+============================== 17:21:46.757178 | 34e21f05-b899-481e-93f2-9e5e8933d502 ==============================
+[0m17:21:46.757178 [info ] [MainThread]: Running with dbt=1.10.9
+[0m17:21:46.762304 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt ', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\nguye\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m17:21:46.768864 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\integration_tests\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:21:46.775655 [debug] [MainThread]: Command `cli deps` failed at 17:21:46.775655 after 0.50 seconds
+[0m17:21:46.779626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D73519C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D85BCA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7D85BCCD0>]}
+[0m17:21:46.784434 [debug] [MainThread]: Flushing usage events
+[0m17:21:47.148612 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:21:47.162309 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:21:47.930603 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:59:34.479349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC3F971930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC40BDC3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC40BDC1F0>]}
+
+
+============================== 07:59:34.490605 | 8e4029c4-9f48-445a-9571-b8996feeba02 ==============================
+[0m07:59:34.490605 [info ] [MainThread]: Running with dbt=1.10.9
+[0m07:59:34.492606 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\nguye\\.dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt ', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m07:59:34.494605 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:59:34.499610 [debug] [MainThread]: Command `cli deps` failed at 07:59:34.498608 after 1.06 seconds
+[0m07:59:34.500606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC3F971930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC40BDCD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC40BDCC40>]}
+[0m07:59:34.502607 [debug] [MainThread]: Flushing usage events
+[0m07:59:34.892154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D53A18D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D660C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D660C1F0>]}
+
+
+============================== 07:59:34.901177 | 126d33d4-8d7f-483b-9980-73058d83a775 ==============================
+[0m07:59:34.901177 [info ] [MainThread]: Running with dbt=1.10.9
+[0m07:59:34.904156 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\nguye\\.dbt', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt ', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'printer_width': '80', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m07:59:34.906155 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\integration_tests\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:59:34.909699 [debug] [MainThread]: Command `cli deps` failed at 07:59:34.909157 after 0.37 seconds
+[0m07:59:34.910712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D53A18D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D660CD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143D660CC40>]}
+[0m07:59:34.912712 [debug] [MainThread]: Flushing usage events
+[0m07:59:35.644393 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:59:36.050127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:59:36.744931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B0BE1900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B1E4C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B1E4C1F0>]}
+
+
+============================== 07:59:36.752934 | 05765ae6-7096-48a5-a12b-ccfccc40c997 ==============================
+[0m07:59:36.752934 [info ] [MainThread]: Running with dbt=1.10.9
+[0m07:59:36.754933 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'empty': 'None', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\nguye\\.dbt'}
+[0m07:59:36.747934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7C461900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7D6CC3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7D6CC1F0>]}
+
+
+============================== 07:59:36.756932 | 3d908072-1eae-4629-83e6-67e38a5872b3 ==============================
+[0m07:59:36.756932 [info ] [MainThread]: Running with dbt=1.10.9
+[0m07:59:36.757933 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\integration_tests\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:59:36.758933 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': 'C:\\Users\\nguye\\.dbt'}
+[0m07:59:36.760934 [debug] [MainThread]: Command `cli deps` failed at 07:59:36.760934 after 0.34 seconds
+[0m07:59:36.760934 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path c:\Users\nguye\OneDrive\Máy tính\New folder\son-tung-mtp-analytics\dbt_youtube_dag\dags\dbt\dbt_youtube\dbt_packages\dbt-utils-1.1.1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:59:36.762933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B0BE1900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B1E4CA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1B1E4CCD0>]}
+[0m07:59:36.763935 [debug] [MainThread]: Flushing usage events
+[0m07:59:36.764933 [debug] [MainThread]: Command `cli deps` failed at 07:59:36.763935 after 0.34 seconds
+[0m07:59:36.765932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7C461900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7D6CCA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7D6CCCD0>]}
+[0m07:59:36.767933 [debug] [MainThread]: Flushing usage events
+[0m07:59:37.888026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:59:37.893029 [debug] [MainThread]: An error was encountered while trying to flush usage events
