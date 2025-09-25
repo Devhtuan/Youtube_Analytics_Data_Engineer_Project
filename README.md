@@ -204,7 +204,7 @@ UI: [http://localhost:8080](http://localhost:8080)
 ### 7. Dashboard Power BI
 
 
-<img src="./imgs/06-pbi-dashboard.png" alt="Power BI Dashboard" width="800">
+<img src="./imgs/pbi-dashboard.png" alt="Power BI Dashboard" width="800">
 
  
 
